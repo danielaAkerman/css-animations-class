@@ -1,0 +1,259 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.phone {
+    position: relative;
+    width: 300px;
+    height: 600px;
+    border: solid 8px;
+    border-radius: 40px;
+    /* background-color: #CCEFFF; */
+    box-shadow:
+        0 19px 38px rgba(0, 0, 0, .3),
+        0 15px 12px rgba(0, 0, 0, .22);
+
+
+
+
+        
+        background: linear-gradient(45deg, #9dd3f680 20%, transparent 21%, transparent 79%, #9dd3f680 80%) , linear-gradient(315deg, #9dd3f680 20%, transparent 21%), linear-gradient(45deg, #9dd3f6 20%, transparent 21%), linear-gradient(315deg, #9dd3f6 20%, transparent 21%, transparent 79%, #9dd3f680 80%);
+        background-size: 1em 1em;
+        background-color: #beebff;
+        opacity: 1
+}
+
+.phone div {
+    position: absolute;
+}
+
+.layer-1 {
+
+    z-index: 1;
+    height: 450px;
+    width: 80px;
+    bottom: 0;
+    right: 60px;
+}
+
+.layer-2 {
+    z-index: 2;
+    height: 450px;
+    width: 80px;
+    bottom: 0;
+    left: 60px;
+}
+
+.layer-3 {
+    border-radius: 16px;
+    z-index: 3;
+    height: 400px;
+    width: 220px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+
+    background: linear-gradient(90deg,#db6b75 25%, transparent 26%, transparent 49%, #db6b7580 50%, #db6b7580 75%, transparent 76% );
+    background-size: 1em 1em;
+    background-color: #ffa8a8;
+    opacity: 1
+
+}
+
+.layer-4 {
+    z-index: 4;
+    height: 364px;
+    width: 80px;
+    bottom: 0;
+    left: 60px;
+}
+
+.layer-5 {
+    border-radius: 16px;
+    z-index: 5;
+    height: 314px;
+    width: 220px;
+    bottom: 0;
+    left: 0;
+    right: 38px;
+    margin: 0 auto;
+
+
+    background: radial-gradient(transparent 79%, #db6b75 80%);
+    background-size: 2em 2em;
+    background-color: #ffa8a8;
+    opacity: 1
+
+
+}
+
+.layer-6 {
+    z-index: 6;
+    height: 275px;
+    width: 80px;
+    bottom: 0;
+    right: 66px;
+}
+
+.layer-7 {
+    border-radius: 16px;
+    z-index: 7;
+    height: 225px;
+    width: 184px;
+    bottom: 0;
+    right: 16px;
+
+/* 
+    background: linear-gradient(45deg, #e3465480 25%, transparent 21%) , linear-gradient(315deg, #e3465480 25%, transparent 21%), linear-gradient(45deg, #e34654 10%, transparent 11%), linear-gradient(315deg, #e34654 10%, transparent 11%),linear-gradient(135deg, #e3465480 25%, transparent 21%) , linear-gradient(225deg, #e3465480 25%, transparent 21%), linear-gradient(135deg, #e34654 10%, transparent 11%), linear-gradient(225deg, #e34654 10%, transparent 11%), radial-gradient(#e34654 20%, transparent 21%);
+    background-size: 1em 1em; */
+    background-color: #ffa8a8;
+    opacity: 1
+
+
+}
+
+.layer-8 {
+    z-index: 8;
+    height: 80px;
+    width: 150px;
+    background-color: rgb(78, 149, 254);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.layer-9 {
+    z-index: 9;
+    height: 100px;
+    width: 140px;
+    background-color: rgb(61, 143, 250);
+    bottom: 0;
+    left: 0;
+}
+
+.layer-10 {
+    z-index: 10;
+
+    height: 100px;
+    width: 140px;
+    background-color: rgb(79, 71, 226);
+    bottom: 0;
+    right: 0;
+}
+
+.left-ear--outer {
+    background-color: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+
+    
+
+}
+
+.left-ear--inner {
+
+    background-color: rgb(255, 102, 217);
+    border-radius: 90%;
+    width: 16px;
+    height: 40px;
+    /* position: absolute; */
+    left: 12px;
+    top: 10px;
+
+}
+
+.right-ear--outer {
+    background-color: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+
+
+}
+
+.right-ear--inner {
+    background-color: rgb(255, 102, 217);
+    border-radius: 90%;
+    width: 16px;
+    height: 40px;
+    /* position: absolute; */
+    right: 12px;
+    top: 10px;
+
+}
+
+.head {
+    background-color: white;
+    width: 100%;
+    height: 77px;
+    border-radius: 50%;
+    top: 28px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+
+}
+
+.head__eye {
+    background-color: black;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    top: 16px;
+
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes blink{
+    0%{
+        height: 4px;
+    }
+    5%{
+        transform: translateY(2px);
+        height: 1px;
+    }
+    10%{
+        transform: translateY(0px);
+        height: 4px;
+    }
+
+}
+.head__eye--left {
+    left: 30px;
+}
+
+.head__eye--right {
+    right: 30px;
+}
+
+
+
+.zigzag {
+    border-radius: 16px;
+    width: 100%;
+    height: 38px;
+    background: linear-gradient(135deg, rgb(63, 176, 176) 25%, transparent 25%) -50px 0, linear-gradient(-135deg, rgb(89 202 202) 25%, transparent 25%) -50px 0;
+    background-size: 32px 67px;
+}
+
+.layer-3,
+.layer-5,
+.layer-7 {
+    box-shadow: inset 0 19px 38px rgba(173, 23, 23, 0.95),
+        0 15px 12px rgba(0, 0, 0, .8);
+}
