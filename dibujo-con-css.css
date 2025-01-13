@@ -4,6 +4,32 @@ body {
     width: 100%;
     display: grid;
     place-items: center;
+
+    counter-reset: game;
+}
+
+input[type=checkbox] {
+    appearance: none;
+    cursor: pointer;
+    height: 50px;
+    margin: 0;
+    position: relative;
+    top: 0;
+    width: 80px;
+    z-index: 2;
+  }
+
+  input[type=checkbox]:focus {
+    appearance: none;
+    outline: none;
+  }
+
+  input:checked {
+    counter-increment: game;
+  }
+
+.total::after {
+    content: counter(game);
 }
 
 .phone {
@@ -20,11 +46,11 @@ body {
 
 
 
-        
-        background: linear-gradient(45deg, #9dd3f680 20%, transparent 21%, transparent 79%, #9dd3f680 80%) , linear-gradient(315deg, #9dd3f680 20%, transparent 21%), linear-gradient(45deg, #9dd3f6 20%, transparent 21%), linear-gradient(315deg, #9dd3f6 20%, transparent 21%, transparent 79%, #9dd3f680 80%);
-        background-size: 1em 1em;
-        background-color: #beebff;
-        opacity: 1
+
+    background: linear-gradient(45deg, #9dd3f680 20%, transparent 21%, transparent 79%, #9dd3f680 80%), linear-gradient(315deg, #9dd3f680 20%, transparent 21%), linear-gradient(45deg, #9dd3f6 20%, transparent 21%), linear-gradient(315deg, #9dd3f6 20%, transparent 21%, transparent 79%, #9dd3f680 80%);
+    background-size: 1em 1em;
+    background-color: #beebff;
+    opacity: 1
 }
 
 .phone div {
@@ -38,7 +64,29 @@ body {
     width: 80px;
     bottom: 0;
     right: 60px;
+
+    animation-name: layer;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
+
+@keyframes layer {
+    0% {
+        bottom: 0;
+    }
+
+    25% {
+        bottom: -60px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+
+.layer-1 input[type=checkbox] {}
 
 .layer-2 {
     z-index: 2;
@@ -46,6 +94,25 @@ body {
     width: 80px;
     bottom: 0;
     left: 60px;
+
+    animation-name: layer;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes layer {
+    0% {
+        bottom: 0;
+    }
+
+    30% {
+        bottom: -60px;
+    }
+
+    100% {
+        bottom: 0;
+    }
 }
 
 .layer-3 {
@@ -59,11 +126,10 @@ body {
     margin: 0 auto;
 
 
-    background: linear-gradient(90deg,#db6b75 25%, transparent 26%, transparent 49%, #db6b7580 50%, #db6b7580 75%, transparent 76% );
+    background: linear-gradient(90deg, #db6b75 25%, transparent 26%, transparent 49%, #db6b7580 50%, #db6b7580 75%, transparent 76%);
     background-size: 1em 1em;
     background-color: #ffa8a8;
     opacity: 1
-
 }
 
 .layer-4 {
@@ -72,6 +138,25 @@ body {
     width: 80px;
     bottom: 0;
     left: 60px;
+
+    animation-name: layer;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+@keyframes layer {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: -60px;
+    }
+
+    100% {
+        bottom: 0;
+    }
 }
 
 .layer-5 {
@@ -89,8 +174,6 @@ body {
     background-size: 2em 2em;
     background-color: #ffa8a8;
     opacity: 1
-
-
 }
 
 .layer-6 {
@@ -99,6 +182,25 @@ body {
     width: 80px;
     bottom: 0;
     right: 66px;
+
+    animation-name: layer;
+    animation-duration: 1.75s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes layer {
+    0% {
+        bottom: 0;
+    }
+
+    25% {
+        bottom: -60px;
+    }
+
+    100% {
+        bottom: 0;
+    }
 }
 
 .layer-7 {
@@ -109,13 +211,11 @@ body {
     bottom: 0;
     right: 16px;
 
-/* 
+    /* 
     background: linear-gradient(45deg, #e3465480 25%, transparent 21%) , linear-gradient(315deg, #e3465480 25%, transparent 21%), linear-gradient(45deg, #e34654 10%, transparent 11%), linear-gradient(315deg, #e34654 10%, transparent 11%),linear-gradient(135deg, #e3465480 25%, transparent 21%) , linear-gradient(225deg, #e3465480 25%, transparent 21%), linear-gradient(135deg, #e34654 10%, transparent 11%), linear-gradient(225deg, #e34654 10%, transparent 11%), radial-gradient(#e34654 20%, transparent 21%);
     background-size: 1em 1em; */
     background-color: #ffa8a8;
     opacity: 1
-
-
 }
 
 .layer-8 {
@@ -155,8 +255,9 @@ body {
     height: 50px;
     position: absolute;
     left: 10px;
+    top: 0;
 
-    
+
 
 }
 
@@ -179,6 +280,7 @@ body {
     height: 50px;
     position: absolute;
     right: 10px;
+    top: 0;
 
 
 }
@@ -219,20 +321,23 @@ body {
 
 }
 
-@keyframes blink{
-    0%{
+@keyframes blink {
+    0% {
         height: 4px;
     }
-    5%{
+
+    5% {
         transform: translateY(2px);
         height: 1px;
     }
-    10%{
+
+    10% {
         transform: translateY(0px);
         height: 4px;
     }
 
 }
+
 .head__eye--left {
     left: 30px;
 }
